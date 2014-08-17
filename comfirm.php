@@ -1,6 +1,5 @@
 ﻿<?php
 	if (!empty($_POST)){
-		var_dump($_POST);
 		$db= new PDO('mysql:host=localhost;
 					dbname=vk;charset=utf8', 'root','');
 		//Точки обязательно должны быть в php, а не в html или sql части кода, следи за обрамлениями (точки должны быть синими)
@@ -20,11 +19,15 @@
 			background-color: gray;
 			}
 		</style>
-		<title>Страница пользователя</title>
+		<title>Подтверждение регистрации</title>
 	</head>
 	<body>
 		<p><a href="/index.php">VK.LOC</a></p>
-		<h1>Страница пользователя</h1>
+		<h1>Регистрация прошла удачно</h1>
+		<?php
+			echo "Добрый день, ".  $_POST['login'];
+			echo "<br>Поздравляем Вас с удачной регистрацией <br> После проверки администратором данные по доступу будут высланы в виде электронного письма на Ваш адрес ".  $_POST['email'];
+		?>
 			<br><img src="http://vk.architektor.com.ua/images/happy.jpg" alt="happy" alt="happy" width="320" height="220">
 		
 	</body>

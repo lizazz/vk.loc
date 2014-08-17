@@ -1,0 +1,1 @@
+INSERT INTO user (EMAIL,LOGIN,PASS,BIRTHDAY) VALUES ("'$_POST['email']'","'$_POST['login']'","'$_POST['pass']'","'$_POST['birthday']'")
