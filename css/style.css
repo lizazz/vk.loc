@@ -1,0 +1,34 @@
+*{
+	margin:0;
+	padding:0;
+}
+.header{
+	font-size: 120%;
+	font-family: Verdana, Arial, Helvetica;
+	Color: white;
+	background-color: #597b9f;
+	width:100%;
+	color:white;
+}
+}
+.sub2{
+	width: 70%;
+	vertical-align: top;			
+}
+.sub1{
+	width: 30%;
+	vertical-align: top;
+}
+.main_page{
+	width:800px;
+	border:4px;
+	color: #000000;
+        margin:0 auto; 
+        text-align:left;
+}
+.footer{
+	text-align:center;
+}
+h2{
+	color:#597b9f;
+}
