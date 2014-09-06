@@ -5,6 +5,7 @@ if (!empty($_POST)){
 		$user=new User();
 		$user->registration($_POST);
 		$result=$user->result;
+		
 	}
 ?>
 <html>

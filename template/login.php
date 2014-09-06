@@ -1,4 +1,16 @@
-﻿<html>
+﻿<?php
+include ('../classes/user.php');
+if (!empty($_POST)){
+		$user=new User();
+		$user->auth($_POST['login'],$_POST['pass'],$access);
+		$final=$user->access;
+		//var_dump($user);
+		//echo $final;
+	}
+?>
+
+<html>
+<html>
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="/css/style.css">
@@ -20,6 +32,10 @@
 			</td>
 			<td class="sub2">
 				<h2>Страница пользователя</h2>
+				<?php
+					if ($final):?>
+						<?php echo "Доброе утро, " . $_POST['login'] . " Вы ввели правильный пароль и получили доступ к своей персональной странице"; ?>
+				<?php else: echo "Вы ввели неправильный Логин или пароль"; endif; ?>
 		</td>
 		</tr>
 		<tr>
