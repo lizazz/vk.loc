@@ -1,5 +1,5 @@
 ﻿<?php
-include ('../classes/user.php');
+include ('../../controller/user.php');
 if (!empty($_POST)){
 		$user=new User();
 		$user->auth($_POST['login'],$_POST['pass'],$access);
@@ -21,13 +21,13 @@ if (!empty($_POST)){
 		<tr>
 			<td class=header colspan="2">
 				<?php
-					include('../template/header.php');
+					include('header.php');
 				?>
 			</td>	
 		</tr>
 		<tr>
 			<td class="sub1">	
-				<img align="middle" src="../images/dog.jpg" width="220px" hight="220px" alt="dog">
+				<img align="middle" src="../../images/dog.jpg" width="220px" hight="220px" alt="dog">
 		
 			</td>
 			<td class="sub2">
@@ -41,7 +41,7 @@ if (!empty($_POST)){
 		<tr>
 			<td class="footer" colspan="2">
 				<?php 
-					include('../template/footer.php');
+					include('footer.php');
 				?>
 			</td>
 		</tr>
