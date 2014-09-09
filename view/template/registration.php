@@ -5,6 +5,7 @@
 <p>Моментальная регистрация</p>
 	<form method="POST" action="comfirm.php">
 		<input type="hidden" name="auth" value="registration">
+		<input type="hidden" name="sesid" value="<?echo session_id();?>">
 		<br>Введите адрес email<br><input type="text" name="email">
 		<br>Введите логин<br><input type="text" name="login">
 		<br>Введите пароль<br><input type="text" name="pass">

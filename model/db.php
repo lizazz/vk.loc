@@ -1,11 +1,12 @@
 <?php
-	function db ($db);
+	class db {
 	const TABLE='user';
 	const DBNAME ='vk';
-	
+	public $db=false;
 	public function __construct(){
-		db= new PDO('mysql:host=localhost;
+		$this->db= new PDO('mysql:host=localhost;
 					dbname=' . self::DBNAME . ';charset=utf8', 'root','');
-		db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		};
+		$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		}
+};
 ?>

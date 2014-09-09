@@ -1,17 +1,20 @@
 <?php
-class User{
-	//include "";
+class db {
 	const TABLE='user';
 	const DBNAME ='vk';
 	public $db=false;
-	public $result= false;
-	public $access=false;
-	
 	public function __construct(){
 		$this->db= new PDO('mysql:host=localhost;
 					dbname=' . self::DBNAME . ';charset=utf8', 'root','');
 		$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		}
+};
+
+class User extends db{
+	public $result= false;
+	public $access=false;
+	
+	
 //функция registration отвечает за занесение данных таблицы в базу данных user
 	public function registration($data) {
 	//-----------------------------------------------------------------------------------------------------------

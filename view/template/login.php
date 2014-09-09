@@ -1,6 +1,10 @@
 ﻿<?php
+//session_start();
 include ('../../controller/user.php');
 if (!empty($_POST)){
+		$_SESSION['login']=$_POST['login'];
+		$_SESSION['pass']=$_POST['pass'];
+		$_SESSION['sesid']=$_POST['sesid'];
 		$user=new User();
 		$user->auth($_POST['login'],$_POST['pass'],$access);
 		$final=$user->access;

@@ -1,7 +1,9 @@
 <?php session_start(); ?>
 <?php 
+//include ('../../model/db.php');
 include ('../../controller/user.php');
-var_dump ($_SESSION);
+$_SESSION['login']=$_POST['login'];
+//echo "сессия=" . $_SESSION['login'];
 if (!empty($_POST)){
 		$user=new User();
 		if ($_POST['auth'] =='registration'){
@@ -31,7 +33,7 @@ if (!empty($_POST)){
 		<tr>
 			<td class="sub1">	
 			<section class="main">
-				<?php if(empty($_SESSION['email'])):?>
+				<?php if(empty($_SESSION['login'])):?>
 					<?php include ('registration.php'); ?>
 					<?php include ('auth.php');?>
 				<?php else: ?>
